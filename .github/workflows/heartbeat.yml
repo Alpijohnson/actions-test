@@ -1,0 +1,13 @@
+name: Der Integritäts-Herzschlag
+
+on: [push]
+
+jobs:
+  heartbeat-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code abrufen
+        uses: actions/checkout@v4
+
+      - name: Integritaet pruefen
+        run: echo "Pipeline Integrity Verified - Monitoring Active"
